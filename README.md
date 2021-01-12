@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/0intro/libelf.svg?branch=master)](https://travis-ci.org/0intro/libelf)
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/22441/badge.svg)](https://scan.coverity.com/projects/eddiehorng-libelf)
 
 <a href="https://scan.coverity.com/projects/eddiehorng-libelf">
   <img alt="Coverity Scan Build Status"

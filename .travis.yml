@@ -4,7 +4,7 @@ env:
   global:
    # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
    #   via the "travis encrypt" command using the project repo's public key
-   - secure: "iB2N25MLDdYPhps5dyVoxm+SMHYek/6MxGKCEw2A8NTFSIfuWPcBliwOKCrVHDMuTb9kgFucrbcK8DAFTADikm81xHfZSALhrwtwIYti8F29wAniG4UHqfQyR7WWX9dm4UhVjsta/BIP8pgMms+1GWjiZPQhARE0n+tFHpCuPzFAi78hMkT40pbq0DObQQELrLN80vhu5IzOS5ZW8yaFy6P7jdmCUBT2DHM6W+b2NU3/ag0L2p21RFa5PewPNgXmXpyPbnSutf0M9QzNZqEElzRBwglOAS7RLT29D0lxRA+RuH1r98ANh4/lqrJLdllrMLtjyoZ+ycPXGAOq0/sF7OeeygMBr3jQz7BphYyFvzl8fcf5SacPCv+dQFCmbOloHPyVJMoscH/PjS89PeJsMFNEK4GbJtVjYOyqFtbzGansUOJGB73GWc6YH0Zptebt/CMZSQ5zmb/iJrUZyMvuYbmjB9UCCyPLi36mBJoIM5CF4gVH8bnhAyTU0EfFIvh/9EFn4s/hRHLuY7GCLWroPQOQE0LX+idyY2r2TeSw/PRM5S5kUX1HFqW7RN/oui9g6UuUscslkSz+d5P1TGAif/egxtMy9YGwfFJlZyHlkp40aEV2xkUTz5PvNWAZkGDq5Sv9hLXOJgkGcqNyBFI7uDiIZgr11J9RMZSanrMaZaI="
+   - secure: "Ez4lmAG0xgYA9L+ynCIaSjEpNHTfGV0as6Eea2+K7wV7wblQnOnBuohde5lg6lbjvaICkT/ZhiXv03O1Y4OfD/D+pX3jTvWLRD+w0AkvpTrqUIcKTNzSkcpLy12bm6TCcl/JqitteXNfgANypAgO9+w8T6DCa76+TvM9iAngqovxSrKyakPfGVzbvjTYZBVpXF4a86b6qWkaYCGcsDDqpgbHGQnlWrlXEzq+h3Msr2Ca7hPZK1xvGXd2Riu2jV0a8XqK7F1NRF98nGODvuKpg42Y2nAYyyD5b2Nb4CGc0yvobNxQ79n+Xs30iMAMiK+pqVQQOgwVegrpcidlqHUkch9hNzGzRF/AGGGy/Q+yRH4RKKz6kHXUMCdTlHVUk4wHA10WEMeWT3yG7pPdS/pG8YqUxhpnwWzuBR3jeMY5XwP+tfKdx7L7u20xWB8Q5Pde6+rqGcDRI94TNfpbHvEE1qUq3oT2u1FG6Wd9VhDjxtKXmwdqmd8awKB9WV8mCnZDU+efjCRcj1lp+N06Guxj+QqXxAQBfdg/ETaBIV9tnnlVyhM96GhcGfKX2ortdsvnF/U/j6ViK53LuENy8YkVwmnMv/pivAuF0vqcJEso15J5nQ1n9UNNGYcSw+RU2qvzk0Iq08uWFJOY3F7hrTU2mVq2BEs6VmCU5tCAvUHMTR8="
 
 before_install:
   - echo -n | openssl s_client -connect scan.coverity.com:443 | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | sudo tee -a /etc/ssl/certs/ca-
@@ -12,9 +12,9 @@ before_install:
 addons:
   coverity_scan:
     project:
-      name: "0intro/libelf"
+      name: "eddiehorng/libelf"
       description: "Build submitted via Travis CI"
-    notification_email: 0intro@gmail.com
+    notification_email: eddiehorng.tw@gmail.com
     build_command_prepend: "make nuke"
     build_command: "make"
     branch_pattern: master

@@ -17,7 +17,7 @@ addons:
     notification_email: eddiehorng.tw@gmail.com
     build_command_prepend: "make nuke"
     build_command: "make"
-    branch_pattern: master
+    branch_pattern: coverity_scan
 
 script:
   - make nuke
